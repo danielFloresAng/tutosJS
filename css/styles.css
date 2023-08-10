@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300;400;500;600;700&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Red+Hat+Display:wght@400;600&display=swap');
+/* 
+font-family: 'Poiret One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Sacramento', cursive; 
+font-family: 'Dancing Script', cursive;
+font-family: 'Red Hat Display', sans-serif;
+*/
+
+/* colores */
+:root {
+--secundary:#876B91;
+--contrast:#EC8C2B;
+--main:#49516D;
+--white:#E2EBF3;
+--blac:#111003;
+--contrastTwo:#BFDB95;
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-size: 16px; 
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Prueba párrafo */
+.pClase {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--white);
+    padding: 2rem;
+    background-color: var(--contrast);
+}
+
+/* Práctica en clase */
