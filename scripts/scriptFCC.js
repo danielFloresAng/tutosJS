@@ -146,6 +146,24 @@ console.log(9 == 9); //output --> true
 console.log(9 == 8); //output --> false
 console.log("Hi" == "hi"); //output --> false
 
+function nextInLineB (arrB, numBk) {
+    arrB.push(numBk);
+    return arrB.shift();
+}
+
+var arrayN = [3, 5, 9, 30], numX = 8;
+console.log(nextInLine(arrayN,numX));
+console.log(arrayN);
+
+function proximoEnLaFila (arr, elem) {
+    arr.push(elemento);
+    return arr.shift();
+}
+// 02.55.40
+
+
+
+
 
 
 // 02.48.05
