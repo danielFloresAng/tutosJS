@@ -140,34 +140,152 @@ console.log("Before = " + theArray);//output --> Before = 1,2,3,4
 console.log(nextInLine(theArray, 9));//output --> 1
 console.log("After = " + theArray); //output --> After = 2,3,4,9
 
-/* Operador de igualdad ==. Al comparar dos valores el resultado será "true" ó "false",
+/* Operador de igualdad == . Al comparar dos valores el resultado será "true" ó "false",
   dependiendo si los valores son iguales o no.*/
 console.log(9 == 9); //output --> true
 console.log(9 == 8); //output --> false
 console.log("Hi" == "hi"); //output --> false
 
-function nextInLineB (arrB, numBk) {
-    arrB.push(numBk);
-    return arrB.shift();
+// Operador de igualdad estricta === . 
+console.log(9 == "9"); //output --> true 
+console.log(9 === "9"); //output --> false
+
+// Diferencia práctica entre el operador de igualdad y el operador de igualdad estricta. el operador de igualdad estricta no sólo compara el valor del dato, también el tipo de dato (string, number, bolean, etc...) y el operador de igualdad "convierte" los valores a un tipo de dato en común
+
+var a;
+var b;
+a = 5;
+b = 5;
+
+console.log(a == b); //output --> true
+console.log(a === b); //output --> true
+
+b = 8;
+
+console.log(a == b); //output --> false 
+console.log(a === b); //output --> false
+
+b = "5";
+
+console.log(a == b); //output --> true
+console.log(a === b); //output --> false
+
+a = "JavaScript";
+b = "JavaScript";
+
+console.log(a == b);
+console.log(a === b);
+
+// Operador de desigualdad != .
+console.log(9 != 6); //output --> true
+console.log(9 != 9); //output --> false
+console.log("JavaScript" != "JavaScript"); //output --> false
+
+// Operador de desigualdad estricta !== .
+console.log(1 != "1"); //output --> false 
+console.log(1 !== "1"); //output --> true
+
+// Operador mayor qué > .
+console.log(3 > 1); //output --> true 
+console.log(3 > 8); //output --> false 
+console.log("Anayel" > "Anazel"); //output --> false 
+// Al comparar strings se cuenta el orden alfabético de los caracteres
+console.log("A" > "B"); //output --> false
+console.log("B" > "A"); //output --> true
+
+var a = 15;
+var b = 7;
+
+console.log(a > b); //output --> true
+console.log(b > a); //output --> false
+
+// Operador mayor o igual qué >= .
+console.log(8 > 8); //output --> false
+console.log(8 >= 8); //output --> true
+
+// Operador menor que <
+console.log(7 < 8); //output --> true
+console.log(10 < 8); //output --> false
+
+console.log("A" < "B"); //output --> true
+console.log("B" < "A"); //output --> false
+console.log("ABC" < "ACB"); //output --> true
+
+var a = 9, b = 7;
+console.log(a < b); //output --> false
+console.log(b < a); //output --> true
+
+// Operador menor o igual que <= .
+console.log(5 < 5); //output --> false
+console.log(5 <= 5); //output --> true
+
+// OPERADORES LÓGICOS
+
+// Operador and && . Todas las comparaciones deben ser verdaderas al usar && para que el resultado sea true, de lo contrario la salida será false
+console.log(true && true); //output -->  true
+console.log(true && false); //output --> false
+console.log(false && true); //output --> false
+console.log(false && false); //output --> false
+
+var a = 5;
+console.log((a > 4) && (a < 10)); //output --> true
+
+var a = 3;
+console.log((a > 4) && (a < 10)); //output --> false
+
+var a = 15;
+console.log((a > 4) && (a < 10)); //output --> false
+
+var a = 15;
+console.log((a == 4) && (a < 10)); //output --> false
+
+
+// Operador or || . Con el operador "or" si cualquiera de los operandos son verdaderos el resultado será true, pero si todos los operandos son falsos el resultado será false.
+
+console.log(true || true); //output -->  true
+console.log(true || false); //output --> true
+console.log(false || true); //output --> true
+console.log(false || false); //output --> false
+
+var a = 8;
+console.log((a < 5) || (a > 15)); //output --> false
+console.log((a > 5) || (a < 15)); //output --> true
+console.log((a > 5) || (a > 15)); //output --> true
+console.log((a < 5) || (a < 15)); //output --> true
+
+
+// Operador not ! . Operador para negar una expresión
+console.log(!true); //output --> false
+console.log(!false); //output --> true
+
+var a = 9;
+console.log(!(a > 10)); //output --> true
+console.log(!(a < 10)); //output --> true
+
+
+// CONDICIONALES if .
+if (true) {
+    console.log("Hi"); //output --> Hi
 }
 
-var arrayN = [3, 5, 9, 30], numX = 8;
-console.log(nextInLine(arrayN,numX));
-console.log(arrayN);
-
-function proximoEnLaFila (arr, elem) {
-    arr.push(elemento);
-    return arr.shift();
+var x = 9;
+if (x > 5) {
+    console.log("the condition is true"); //output --> the condition is true
 }
-// 02.55.40
 
+if (x > 5 && x < 11) {
+    console.log("the condition is true"); //output --> the condition is true
+}
 
+var season = "Winter";
+if (season == "Winter") {
+    console.log("i love winter"); //output --> i love winter
+}
+if (season == "Summer") {
+    console.log("i love winter"); //output --> NA
+}
 
-
-
-
-// 02.48.05
-
-
+// 03.42.32
+// Claúsula else
 
 
