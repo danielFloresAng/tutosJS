@@ -285,7 +285,45 @@ if (season == "Summer") {
     console.log("i love winter"); //output --> NA
 }
 
-// 03.42.32
 // Claúsula else
+x = 4;
+if (x < 20) {
+    console.log("it is true"); //output -->
+} else {
+    console.log("it is not true"); //output -->
+}
+
+season = "winter";
+
+if (season == "summer") {
+    console.log("let's go to the beach"); //output -->
+} else {
+    console.log("it is not summer yet"); //output -->
+}
 
 
+// Cláusula "else if"
+function clasificarValor (value) {
+    if (value % 2 == 0) {
+        console.log("Divisible entre 2"); //output -->
+    } else if (value % 3 == 0) {
+        console.log("Divisible entre 3"); //output -->
+    }
+    else {
+        console.log("Nop"); //output -->
+    }
+}
+clasificarValor (11);
+
+// Condicionales: Orden lógico
+
+function take1 (a, b) {
+if ((a >= 40) && (b < a)) {
+    console.log("Result: Yes!"); //output -->
+} else if ((a == b) || (b > 30)) {
+    console.log("Result: nope"); //output -->
+} else {
+    console.log("Na"); //output -->
+}
+}
+take1 (4, 293);
