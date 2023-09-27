@@ -313,17 +313,95 @@ function clasificarValor (value) {
         console.log("Nop"); //output -->
     }
 }
-clasificarValor (11);
+clasificarValor (9);
 
 // Condicionales: Orden lógico
 
-function take1 (a, b) {
-if ((a >= 40) && (b < a)) {
-    console.log("Result: Yes!"); //output -->
-} else if ((a == b) || (b > 30)) {
-    console.log("Result: nope"); //output -->
-} else {
-    console.log("Na"); //output -->
+function val (value) {
+    if (value < 5) {
+        console.log("less than 5"); //output -->
+    } else if (value < 10){
+        console.log("less than 10"); //output -->
+    } else {
+        console.log("higher or equal to 10"); //output -->
+    }
 }
+val(10);
+
+// Encadenar sentencias "if...else"
+function readIMC(IMC) {
+    if (IMC < 18.5) {
+        console.log("low weight"); //output -->
+    } else if (IMC <= 24.9) {
+        console.log("Normal"); //output -->
+    } else if (IMC <= 29.9) {
+        console.log("hight weight"); //output -->
+    } else {
+        console.log("Outch"); //output -->
+    }
 }
-take1 (4, 293);
+readIMC (20);
+
+// Código de GOLF - Mini project
+function golfScore (par, hits) {
+    if (hits == 1) {
+        return "Hole-in-ine!"; //output -->
+    } else if (hits <= (par - 2) ) {
+        return "Eagle"; //output -->
+    } else if (hits == par - 1 ) {
+        return "Birdie"; //output -->
+    } else if (hits == par ) {
+        return "Par"; //output -->
+    } else if (hits == (par + 1) ) {
+        return "Bogey"; //output -->
+    } else if (hits == (par + 2) ) {
+        return "Double Bogey"; //output -->
+    } else if (hits >= (par + 3) ) {
+        return "Go Home!"; //output -->
+    } else {
+        return "Not valid?"; //output -->
+    }
+}
+var score = golfScore(4, 7);
+console.log(score); //output -->
+
+// Sentencias switch
+function clasifyValue(value) {
+    var answer;
+    switch (value) { //Switch permite decidir a partir de un valor que va a pasar con éste mismo
+        case 1: //Se definen casos específicos (con la palabra reservada "case") para la expresión asignada a switch, en éste caso la expresión es "value"
+            answer = "alpha";
+            break; //Es importante terminar cada caso ("case") con una sentencia "break".
+        case 2:
+            answer = "beta"
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+    }
+    return answer;
+}
+var x = clasifyValue(4);
+console.log(x); //output -->
+
+//  Ej. 2
+
+var product = "burguer";
+
+switch (product) {
+    case "pizza":
+        console.log("$10USD"); //output -->
+        break;
+    case "burguer":
+        console.log("$7USD"); //output -->
+        break;
+    case "icecream":
+        console.log("$3USD"); //output -->
+        break;
+}
+
+// Sentencias Switch: Opción predeterminada
+//04.24.33
