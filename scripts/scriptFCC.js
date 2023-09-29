@@ -404,4 +404,86 @@ switch (product) {
 }
 
 // Sentencias Switch: Opción predeterminada
-//04.24.33
+
+function selectLanguaje(value) {
+    var languaje;
+    switch (value) {
+        case 1:
+            languaje = "spanish";
+            break;
+        case 2:
+            languaje = "french";
+            break;
+        case 3:
+            languaje = "italian";
+            break;
+        default: //default es una palabra reservada para definir un valor de respaldo en las sentencias switch, es equivalente a "else" en las condicionales
+            languaje = "english";
+            break;
+    }
+    return languaje;
+}
+var ans = selectLanguaje();
+console.log(ans); //output -->
+
+
+// Sentencias Switch: Múltiples casos
+function clasifyVolum(value) {
+    var volume;
+    switch (value) {
+        case 1:
+            volume = "low";
+            break;
+        case 2: //para usar múltiples casos en las sentencias switch solo usamos la palabra reservada "case" y su respectivo caso cuando queramos que la salida sea un mismo resultado para todos estos casos.
+        case 3:
+            volume = "middle";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            volume = "high";
+            break;
+        default:
+            volume = "mute";
+            break
+    }
+    return volume;
+}
+var vol = clasifyVolum();
+console.log(vol); //output -->
+
+
+//Reemplazar "if...else" por "switch"
+function seleccionarIdioma (valor) {
+    var idioma;
+
+    //El siguiente código de la sentencia switch equivale al segundo código comentado usando condicionales "if" y "else"
+    switch(valor) {
+        case 1:
+            idioma = "español";
+            break;
+        case 2:
+            idioma = "francés";
+            break;
+        case 3:
+            idioma = "italiano";
+            break;
+        default:
+            idioma = "inglés";
+            break;
+    }
+
+    // if (valor == 1) {
+    //     idioma = "español";
+    // } else if (valor == 2) {
+    //     idioma = "francés";
+    // } else if (valor == 3) {
+    //     idioma = "italiano";
+    // } else {
+    //     idioma = "inglés"
+    // }
+    return idioma;
+}
+
+var languaje = seleccionarIdioma();
+console.log(languaje); //output -->
