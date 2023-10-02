@@ -487,3 +487,158 @@ function seleccionarIdioma (valor) {
 
 var languaje = seleccionarIdioma();
 console.log(languaje); //output -->
+
+//Retornar valores Booleanos
+function isLessThan (a, b) {
+    return a < b; //Con la opción "return" podemos retornar valores booleanos sin la necesidad de usar sentencias switch o condicionales. Esta línea de código da la misma salida que las líneas de código con condicionales escritas y comentadas abajo.
+
+    // if (a < b) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+}
+console.log(isLessThan(3,6)); //output -->
+
+//Patrón de retorno anticipado
+
+function myFunction() {
+    console.log("Hello"); //output -->
+    return "World";
+    console.log("Bye"); //Una línea que va despúes de una sentencia "return" no se va a ejecutar ya que sería un "unreachable code detected"
+}
+console.log(myFunction()); //output -->
+//When we show the output of the function aftert our code we don't see the lines that are after the "return" sentence.
+
+//The "antipated return pattern" is very useful when we need to stop any function when ther are some specifyc condition.
+
+function calculateSquareRoot (num) {
+    if (num < 0) {
+        return undefined;
+    } //If the condition is true the next line wont be readed because ther are a "return" sentence that ejecutes the code, because the condition is true, but, is the condition is false, the code will continous execute until the next "return" sentence.
+
+    return Math.sqrt(num);//Note: the "Math.sqrt()" feature give us the square root of a numbre.
+}
+console.log(calculateSquareRoot(4)); //output -->
+
+
+
+/*PROJECT - Cards counter
+
+Project description:
+In the casino game "blackjack", the players take advantge against the hous by making a register of the relative numer of high and low cards that are still in the deck of cards. This is call cards counter.
+
+To have more high cards is an advanage to the player. A value is asigned to each card in order to the next table
+
+- When the counter is positive, the player must bet high.
+- When the counter result is equal to 0 or negativ, the player must bet low.
+
+Counter change               Cards
+--------------------------------------------
++1                       2, 3, 4, 5, 6
+0                        7, 8 , 9
+-1                       10, J, Q, K, A
+
+Our goal is to define a function to count the cards.
+
+The function must be take a "card" parameter that could be a number or a string and then raise or reduct the value from the "counter" global variable in order to the card value (see the table above).
+
+The function must be return a string with the actual count and the string chain:
+- "Bet" if the counter is positive.
+- "Wait" if the counter is cero o negativ.
+
+The actual counter and the player choice ("Bet" or "Wait") must be separated by an space. */
+
+var counter = 0;
+
+function cardCounter (card) {
+    var choice;
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            counter++;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            counter--;
+            break;
+    }
+    if (counter > 0) {
+        choice = "Bet";
+    } else {
+        choice = "Wait";
+    }
+    return counter + " " + choice;
+}
+console.log(cardCounter(2));
+console.log(cardCounter(3));
+console.log(cardCounter(6));
+console.log(cardCounter(6));
+console.log(cardCounter(8));
+console.log(cardCounter(10));
+console.log(cardCounter(10));
+console.log(cardCounter("K"));
+console.log(cardCounter("A"));
+
+
+/* Create objets
+
+Objects allow to save a sequence or group of properties tha are related with their correspondent values. */
+var myDog = {
+    "name": "Stevie",
+    "age": 5,
+    "weight": 7,
+    "race": "Boxer"
+}; 
+/* Objects are save between the braces ({"object"}) and we can write a sequence of properties and values. First must be write the propertie inside quotes("") then separate de propertie with a colon(:) and set the value of that propertie (that value could be a number, string, etc...), after each propertie-value pair we need to use a coma (,) to separate each pair*/
+
+
+/*Acces to properties: Point notation.
+
+We are able to acces to each propertie and value of each object by using point notation.
+To tho this we need to type our variable name then a point and after the propertie which we want acces to*/
+
+var myDog = {
+    "name": "Stevie",
+    "age": 5,
+    "weight": 7,
+    "race": "Boxer"
+}; 
+
+console.log(myDog.name);
+console.log(myDog.race);
+
+/* Acces to properties: brackets notation
+
+Similary to point notation, we can acces to any object propertie by brackets notation, to do this we need to type the variable name an then write the propertie we want to acces inside brackets ([]).
+*/
+var myNotebook = {
+    "color": "blue",
+    "category": 3,
+    "pages number": 200
+}
+console.log(myNotebook["pages number"]);
+
+/* Acces to properties: variables
+
+
+*/
+var results = {
+    1: "eva00",
+    2: "fayeValentine",
+    3: "naokoReyko"
+}
+
+var position = 3;
+console.log(results[position]);
+
+var position = results[2];
+console.log(position);
+
+//05.10.03
